@@ -1,0 +1,30 @@
+#!/bin/bash
+#PBS -N OptimizationJob
+#PBS -l walltime=72:00:00
+#PBS -l select=1:ncpus=61:mem=256gb
+#PBS -j oe
+#PBS -o output_${T_TILDE}.txt
+
+export DIR_SIMUL=$PBS_O_WORKDIR
+cd $DIR_SIMUL
+
+echo "DIR_SIMUL = $DIR_SIMUL"
+echo "Allocated nodes:"
+cat $PBS_NODEFILE
+
+NP=$(wc -l $PBS_NODEFILE | awk '{print $1}')
+echo "Total CPU count = $NP"
+
+module load anaconda3/personal
+source activate base
+conda activate gasses-paper-env
+echo "CONDA_DEFAULT_ENV"
+echo $CONDA_DEFAULT_ENV
+echo "conda info"
+conda info
+python --version
+module list
+
+echo "Command to execute: python ${DIR_SIMUL}/Optimization_SGD_PBS.py ${T_TILDE}"
+/usr/bin/time python ${DIR_SIMUL}/Optimization_SGD_PBS.py ${T_TILDE}
+
