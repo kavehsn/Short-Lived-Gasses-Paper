@@ -40,3 +40,31 @@ conda activate gasses-paper-env
 ```bash
 jupyter lab
 ```
+---
+## Running the Optimizations on a High-Performance Computing Cluster (HPC)
+
+The optimizations carried out in this study require the use of a [high-performance computing cluster](https://www.imperial.ac.uk/computational-methods/hpc/), in our case the Imperial College London system, which uses [PBS](https://en.wikipedia.org/wiki/Portable_Batch_System) as its job scheduler.
+
+Running the optimization codes involves:
+
+1. **Logging in to the HPC server**
+
+   ```bash
+   ssh username@login.hpc.ic.ac.uk
+   ```
+2. **Creating / activating the Conda environment**
+   As discussed in the earlier section (using the provided `GassesPaper_environment.yml`)
+3. **Copying the necessary files to your HPC working directory**
+   - All files in the optimization folders:
+     -[Grid search](https://github.com/kavehsn/Short-Lived-Gasses-Paper/tree/64e52102a70f3ad6fe3715a8d6183a2f870881be/HPC%20Optimization%20(GridSearch)
+     -[stochastic gradient descent](https://github.com/kavehsn/Short-Lived-Gasses-Paper/tree/main/HPC%20Optimization%20(SGD))
+   -The calibration [picke files](https://github.com/kavehsn/Short-Lived-Gasses-Paper/tree/main/Pickle%20Files) on to your working directory of the server.
+4. **Submitting the optimization jobs**
+   For the **grid-search** implementation:
+  ```bash
+  python Submit_Optimization_GridSearch_PBS.py
+  ```
+  **For the stochastic gradient descent implementation:**
+  ```bash
+  python Submit_Optimization_SGD_PBS.py
+  ```
