@@ -66,7 +66,7 @@ Running the optimization codes involves:
    ```bash
    python Submit_Optimization_GridSearch_PBS.py
    ```
-   For the stochastic gradient descent implementation:
+   For the **stochastic gradient descent** implementation:
    ```bash
    python Submit_Optimization_SGD_PBS.py
    ```
