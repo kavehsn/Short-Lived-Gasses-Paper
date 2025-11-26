@@ -32,8 +32,8 @@ cd Short-Lived-Gasses-Paper
 ### 2️⃣ Create & activate environment
 
 ```bash
-conda env create -f GassesPaper_environment.yml -n slcp-paper
-conda activate slcp-paper
+conda env create -f GassesPaper_environment.yml -n gasses-paper-env
+conda activate gasses-paper-env
 ```
 ### 3️⃣ Launch JupyterLab
 
