@@ -61,10 +61,10 @@ Running the optimization codes involves:
    - The calibration [picke files](https://github.com/kavehsn/Short-Lived-Gasses-Paper/tree/main/Pickle%20Files) on to your working directory of the server.
 4. **Submitting the optimization jobs**
    For the **grid-search** implementation:
-  ```bash
-  python Submit_Optimization_GridSearch_PBS.py
-  ```
-  **For the stochastic gradient descent implementation:**
-  ```bash
-  python Submit_Optimization_SGD_PBS.py
-  ```
+   ```bash
+   python Submit_Optimization_GridSearch_PBS.py
+   ```
+   For the stochastic gradient descent implementation:
+   ```bash
+   python Submit_Optimization_SGD_PBS.py
+   ```
