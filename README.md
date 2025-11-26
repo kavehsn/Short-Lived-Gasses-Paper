@@ -53,13 +53,14 @@ Running the optimization codes involves:
    ssh username@login.hpc.ic.ac.uk
    ```
 2. **Creating / activating the Conda environment**
+   
    As discussed in the earlier section (using the provided `GassesPaper_environment.yml`)
-3. **Copying the necessary files to your HPC working directory**
+4. **Copying the necessary files to your HPC working directory**
    - All files in the optimization folders:
      - [Grid search](https://github.com/kavehsn/Short-Lived-Gasses-Paper/tree/64e52102a70f3ad6fe3715a8d6183a2f870881be/HPC%20Optimization%20(GridSearch))
      - [stochastic gradient descent](https://github.com/kavehsn/Short-Lived-Gasses-Paper/tree/main/HPC%20Optimization%20(SGD))
    - The calibration [picke files](https://github.com/kavehsn/Short-Lived-Gasses-Paper/tree/main/Pickle%20Files) on to your working directory of the server.
-4. **Submitting the optimization jobs**
+5. **Submitting the optimization jobs**
    
    For the **grid-search** implementation:
    ```bash
